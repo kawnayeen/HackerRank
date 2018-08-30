@@ -1,12 +1,13 @@
-package _30_days_of_code;
+package _30_days_of_code._18_stack_and_queue;
 
+import _30_days_of_code._18_stack_and_queue.Palindrome;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class _18_StackAndQueueTest {
+public class PalindromeTest {
     @Test
     public void testPalindrome(){
-        _18_StackAndQueue palindrome = new _18_StackAndQueue();
+        Palindrome palindrome = new Palindrome();
         Assert.assertTrue(palindrome.isPalindrome("racecar"));
         Assert.assertFalse(palindrome.isPalindrome("kamarul"));
     }

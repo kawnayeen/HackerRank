@@ -1,21 +1,20 @@
-package _30_days_of_code;
+package _30_days_of_code._18_stack_and_queue;
 
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 
-public class _18_StackAndQueue {
+/**
+ * kawnayeen
+ * 30/8/18
+ */
+public class Solution {
     private Stack<Character> stack;
     private Queue<Character> queue;
 
-    public _18_StackAndQueue() {
+    public Solution() {
         stack = new Stack<>();
         queue = new LinkedList<>();
-    }
-
-    public boolean isPalindrome(String input) {
-        String reversed = new StringBuilder(input).reverse().toString();
-        return input.equals(reversed);
     }
 
     public void pushCharacter(Character character){
