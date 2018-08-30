@@ -37,24 +37,20 @@ public class Node {
         return this;
     }
 
-    private boolean hasLeftTree() {
+    public boolean hasLeftTree() {
         return leftTree != null;
     }
 
-    private boolean hasRightTree() {
+    public boolean hasRightTree() {
         return rightTree != null;
     }
 
-    public void print() {
-        System.out.println(value);
-        if (hasLeftTree()) {
-            System.out.println("Left : ");
-            leftTree.print();
-        }
-        if (hasRightTree()) {
-            System.out.println("Right : ");
-            rightTree.print();
-        }
+    public Node getLeftTree() {
+        return leftTree;
+    }
+
+    public Node getRightTree() {
+        return rightTree;
     }
 
     public int getTreeDepth() {

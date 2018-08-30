@@ -1,7 +1,7 @@
 package _30_days_of_code._22_binary_search_tree;
 
 public class BinarySearchTree {
-    private Node rootNode;
+    protected Node rootNode;
 
     public BinarySearchTree(int root) {
         rootNode = new Node(root);
@@ -18,10 +18,6 @@ public class BinarySearchTree {
             leafToInsert.setLeftTree(node);
         else
             leafToInsert.setRightTree(node);
-    }
-
-    public void printTree(){
-        rootNode.print();
     }
 
     public int getDepth(){
