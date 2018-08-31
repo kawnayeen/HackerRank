@@ -26,5 +26,6 @@ public class BinarySearchTreeTest {
         binarySearchTree.addElement(7);
         binarySearchTree.addElement(2);
         binarySearchTree.addElement(1);
+        Assert.assertEquals("3 2 5 1 4 7",binarySearchTree.getLevelOrder());
     }
 }
