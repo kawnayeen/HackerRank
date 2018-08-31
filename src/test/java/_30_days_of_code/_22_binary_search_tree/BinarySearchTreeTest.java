@@ -17,4 +17,14 @@ public class BinarySearchTreeTest {
         binarySearchTree.addElement(10);
         Assert.assertEquals(4, binarySearchTree.getDepth());
     }
+
+    @Test
+    public void testLevelOrder() {
+        BinarySearchTree binarySearchTree = new BinarySearchTree(3);
+        binarySearchTree.addElement(5);
+        binarySearchTree.addElement(4);
+        binarySearchTree.addElement(7);
+        binarySearchTree.addElement(2);
+        binarySearchTree.addElement(1);
+    }
 }

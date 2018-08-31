@@ -30,11 +30,15 @@ public class Node {
     }
 
     public Node getLeafToInsert(Node nodeToInsert) {
-        if (nodeToInsert.getValue() < value && hasLeftTree())
-            return leftTree.getLeafToInsert(nodeToInsert);
-        if (hasRightTree())
-            return rightTree.getLeafToInsert(nodeToInsert);
-        return this;
+        if (nodeToInsert.getValue() < value) {
+            if (hasLeftTree())
+                return leftTree.getLeafToInsert(nodeToInsert);
+            return this;
+        } else {
+            if (hasRightTree())
+                return rightTree.getLeafToInsert(nodeToInsert);
+            return this;
+        }
     }
 
     public boolean hasLeftTree() {
