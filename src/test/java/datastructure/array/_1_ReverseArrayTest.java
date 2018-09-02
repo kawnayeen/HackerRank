@@ -3,11 +3,11 @@ package datastructure.array;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class ReverseArrayTest {
+public class _1_ReverseArrayTest {
     @Test
     public void testReverseArray() {
         int[] intValues = new int[]{1, 8, 3, 4, 5, 6, 7, 2};
-        int[] reverseArr = new ReverseArray().reverse(intValues);
+        int[] reverseArr = new _1_ReverseArray().reverse(intValues);
         Assert.assertEquals(2, reverseArr[0]);
         Assert.assertEquals(7, reverseArr[1]);
         Assert.assertEquals(6, reverseArr[2]);
