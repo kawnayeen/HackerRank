@@ -26,7 +26,7 @@ public class _7_NewYearChaosTest {
 
     @Test
     public void sampleTestCase1() {
-        int[] input = {5 ,1, 2, 3, 7, 8, 6, 4};
+        int[] input = {5, 1, 2, 3, 7, 8, 6, 4};
         Assert.assertEquals(_7_NewYearChaos.TOO_CHAOTIC, newYearChaos.minimumBribes(input));
     }
 
@@ -34,5 +34,11 @@ public class _7_NewYearChaosTest {
     public void sampleTestCase2() {
         int[] input = {1, 2, 5, 3, 4, 7, 8, 6};
         Assert.assertEquals("4", newYearChaos.minimumBribes(input));
+    }
+
+    @Test
+    public void sampleTestCase3() {
+        int[] input = {1, 2, 5, 3, 7, 8, 6, 4};
+        Assert.assertEquals("7", newYearChaos.minimumBribes(input));
     }
 }
