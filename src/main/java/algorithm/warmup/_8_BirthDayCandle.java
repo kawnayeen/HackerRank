@@ -1,10 +1,10 @@
-package algorithm;
+package algorithm.warmup;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class _8_BirthDayCandle {
-    int birthdayCakeCandles(int[] ar) {
+    public int birthdayCakeCandles(int[] ar) {
         Map<Integer, Integer> sameHeightCandles = new HashMap<>();
         int maxValue = Integer.MIN_VALUE;
         for (int value : ar) {

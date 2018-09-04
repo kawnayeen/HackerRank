@@ -1,4 +1,4 @@
-package algorithm;
+package algorithm.warmup;
 
 import java.util.Arrays;
 

@@ -1,12 +1,11 @@
-package algorithm;
+package algorithm.warmup;
 
+import algorithm.warmup._2_CompareTriplets;
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.List;
-
-import static org.junit.Assert.*;
 
 /**
  * kawnayeen

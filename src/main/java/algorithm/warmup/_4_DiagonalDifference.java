@@ -1,11 +1,11 @@
-package algorithm;
+package algorithm.warmup;
 
 /**
  * kawnayeen
  * 4/9/18
  */
 public class _4_DiagonalDifference {
-    int diagonalDifference(int[][] arr) {
+    public int diagonalDifference(int[][] arr) {
         int sumOfPrimaryDiagonal = 0;
         int sumOfSecondaryDiagonal = 0;
         int arraySize = arr.length;

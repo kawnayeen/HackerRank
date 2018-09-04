@@ -1,4 +1,4 @@
-package algorithm;
+package algorithm.warmup;
 
 /**
  * kawnayeen
@@ -8,7 +8,7 @@ public class _6_Staircase {
     private static final String SPACE = " ";
     private static final String HASH = "#";
 
-    String stairCase(int n) {
+    public String stairCase(int n) {
         StringBuilder stringBuilder = new StringBuilder();
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {

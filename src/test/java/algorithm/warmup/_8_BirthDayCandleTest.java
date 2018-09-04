@@ -1,5 +1,6 @@
-package algorithm;
+package algorithm.warmup;
 
+import algorithm.warmup._8_BirthDayCandle;
 import org.junit.Assert;
 import org.junit.Test;
 

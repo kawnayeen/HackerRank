@@ -1,8 +1,7 @@
-package algorithm;
+package algorithm.warmup;
 
+import algorithm.warmup._6_Staircase;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 /**
  * kawnayeen

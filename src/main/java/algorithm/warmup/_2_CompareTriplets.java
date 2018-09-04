@@ -1,4 +1,4 @@
-package algorithm;
+package algorithm.warmup;
 
 import java.util.Arrays;
 import java.util.List;
@@ -8,7 +8,7 @@ import java.util.List;
  * 4/9/18
  */
 public class _2_CompareTriplets {
-    List<Integer> compareTriplets(List<Integer> a, List<Integer> b) {
+    public List<Integer> compareTriplets(List<Integer> a, List<Integer> b) {
         int aliceScore = 0;
         int bobScore = 0;
         for (int i = 0; i < a.size(); i++) {

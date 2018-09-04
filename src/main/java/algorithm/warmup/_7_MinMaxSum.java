@@ -1,4 +1,4 @@
-package algorithm;
+package algorithm.warmup;
 
 public class _7_MinMaxSum {
     public String miniMaxSum(int[] arr) {

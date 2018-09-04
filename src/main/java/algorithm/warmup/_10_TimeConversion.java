@@ -1,4 +1,4 @@
-package algorithm;
+package algorithm.warmup;
 
 public class _10_TimeConversion {
     private static final String AM = "AM";
