@@ -1,6 +1,5 @@
 package algorithm.warmup;
 
-import algorithm.warmup._4_DiagonalDifference;
 import org.junit.Assert;
 import org.junit.Test;
 

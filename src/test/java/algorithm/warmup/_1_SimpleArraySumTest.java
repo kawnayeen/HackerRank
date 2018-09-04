@@ -1,6 +1,5 @@
 package algorithm.warmup;
 
-import algorithm.warmup._1_SimpleArraySum;
 import org.junit.Assert;
 import org.junit.Test;
 

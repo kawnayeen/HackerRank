@@ -1,6 +1,5 @@
 package algorithm.warmup;
 
-import algorithm.warmup._6_Staircase;
 import org.junit.Test;
 
 /**

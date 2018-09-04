@@ -1,6 +1,5 @@
 package algorithm.warmup;
 
-import algorithm.warmup._2_CompareTriplets;
 import org.junit.Assert;
 import org.junit.Test;
 
