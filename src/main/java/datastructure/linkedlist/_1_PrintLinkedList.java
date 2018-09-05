@@ -70,4 +70,23 @@ public class _1_PrintLinkedList {
         head.next = null;
         return newHead;
     }
+
+    boolean compareLists(SinglyLinkedListNode head1, SinglyLinkedListNode head2) {
+        if (head1 == null && head2 == null)
+            return true;
+        boolean isEqual = true;
+        while (head1 != null && head2 != null) {
+            if (head1.data != head2.data) {
+                isEqual = false;
+                break;
+            }
+            head1 = head1.next;
+            head2 = head2.next;
+        }
+        if (isEqual) {
+            if (head1 != null || head2 != null)
+                isEqual = false;
+        }
+        return isEqual;
+    }
 }
