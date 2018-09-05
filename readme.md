@@ -5,9 +5,9 @@ Repository for practicing Hackerrank problems
 
 Topics / Tutorials
 -----------------
-* 30 Days of Code
-* Data Structures
-* Algorithm
+* [30 Days of Code](https://github.com/kawnayeen/hackerrank/tree/master/src/main/java/_30_days_of_code)
+* [Data Structures](https://github.com/kawnayeen/hackerrank/tree/master/src/main/java/datastructure)
+* [Algorithm](https://github.com/kawnayeen/hackerrank/tree/master/src/main/java/algorithm)
 * Interview Preparation Kit
 
 How to run
