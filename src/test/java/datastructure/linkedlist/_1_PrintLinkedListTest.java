@@ -20,6 +20,17 @@ public class _1_PrintLinkedListTest extends ConsoleOutputTest {
     }
 
     @Test
+    public void testReverseThenPrint() {
+        _1_PrintLinkedList.SinglyLinkedList linkedList = new _1_PrintLinkedList.SinglyLinkedList();
+        linkedList.insertNode(16);
+        linkedList.insertNode(13);
+        linkedList.insertNode(19);
+        _1_PrintLinkedList printList = new _1_PrintLinkedList();
+        printList.printLinkedList(printList.reverse(linkedList.head));
+        Assert.assertEquals("19\n13\n16\n", outContent.toString());
+    }
+
+    @Test
     public void testReversePrint() {
         _1_PrintLinkedList.SinglyLinkedList linkedList = new _1_PrintLinkedList.SinglyLinkedList();
         linkedList.insertNode(16);

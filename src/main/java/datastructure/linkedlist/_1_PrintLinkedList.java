@@ -61,4 +61,13 @@ public class _1_PrintLinkedList {
         reversePrint(head.next);
         System.out.println(head.data);
     }
+
+    SinglyLinkedListNode reverse(SinglyLinkedListNode head) {
+        if (head == null || head.next == null)
+            return head;
+        SinglyLinkedListNode newHead = reverse(head.next);
+        head.next.next = head;
+        head.next = null;
+        return newHead;
+    }
 }
