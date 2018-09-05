@@ -89,4 +89,38 @@ public class _1_PrintLinkedList {
         }
         return isEqual;
     }
+
+    SinglyLinkedListNode mergeLists(SinglyLinkedListNode head1, SinglyLinkedListNode head2) {
+        if (head1 == null && head2 == null)
+            return null;
+        if (head1 == null)
+            return head2;
+        if (head2 == null)
+            return head1;
+        SinglyLinkedListNode newHead, residentNode, immigrantNode;
+
+        if (head1.data < head2.data) {
+            residentNode = head1;
+            newHead = head1;
+            immigrantNode = head2;
+        } else {
+            residentNode = head2;
+            newHead = head2;
+            immigrantNode = head1;
+        }
+
+        while (residentNode.next != null && immigrantNode != null) {
+            if (residentNode.next.data < immigrantNode.data) {
+                residentNode = residentNode.next;
+            } else {
+                SinglyLinkedListNode tempNode = immigrantNode;
+                immigrantNode = immigrantNode.next;
+                tempNode.next = residentNode.next;
+                residentNode.next = tempNode;
+            }
+        }
+        if (immigrantNode != null)
+            residentNode.next = immigrantNode;
+        return newHead;
+    }
 }
