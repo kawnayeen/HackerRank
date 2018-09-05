@@ -54,4 +54,11 @@ public class _1_PrintLinkedList {
         previousNode.next = nodeToDelete.next;
         return head;
     }
+
+    void reversePrint(SinglyLinkedListNode head) {
+        if (head == null)
+            return;
+        reversePrint(head.next);
+        System.out.println(head.data);
+    }
 }

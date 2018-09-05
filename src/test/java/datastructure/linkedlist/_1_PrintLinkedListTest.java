@@ -20,7 +20,17 @@ public class _1_PrintLinkedListTest extends ConsoleOutputTest {
     }
 
     @Test
-    public void testDeleteNode(){
+    public void testReversePrint() {
+        _1_PrintLinkedList.SinglyLinkedList linkedList = new _1_PrintLinkedList.SinglyLinkedList();
+        linkedList.insertNode(16);
+        linkedList.insertNode(13);
+        _1_PrintLinkedList printList = new _1_PrintLinkedList();
+        printList.reversePrint(linkedList.head);
+        Assert.assertEquals("13\n16\n", outContent.toString());
+    }
+
+    @Test
+    public void testDeleteNode() {
         _1_PrintLinkedList.SinglyLinkedList linkedList = new _1_PrintLinkedList.SinglyLinkedList();
         linkedList.insertNode(16);
         linkedList.insertNode(13);
