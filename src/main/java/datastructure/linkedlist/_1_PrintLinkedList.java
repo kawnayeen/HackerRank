@@ -41,4 +41,17 @@ public class _1_PrintLinkedList {
             head = head.next;
         }
     }
+
+    SinglyLinkedListNode deleteNode(SinglyLinkedListNode head, int position) {
+        if (position == 0)
+            return head.next;
+        SinglyLinkedListNode previousNode = head;
+        SinglyLinkedListNode nodeToDelete = head.next;
+        for (int i = 1; i < position; i++) {
+            previousNode = nodeToDelete;
+            nodeToDelete = nodeToDelete.next;
+        }
+        previousNode.next = nodeToDelete.next;
+        return head;
+    }
 }
