@@ -4,7 +4,7 @@ package datastructure.linkedlist;
  * kawnayeen
  * 5/9/18
  */
-public class _1_PrintLinkedList {
+public class _3_InsertNodeAtHead {
     static class SinglyLinkedListNode {
         public int data;
         public SinglyLinkedListNode next;
@@ -17,21 +17,9 @@ public class _1_PrintLinkedList {
 
     static class SinglyLinkedList {
         public SinglyLinkedListNode head;
-        public SinglyLinkedListNode tail;
 
         public SinglyLinkedList() {
             this.head = null;
-            this.tail = null;
-        }
-
-        public void insertNode(int nodeData) {
-            SinglyLinkedListNode node = new SinglyLinkedListNode(nodeData);
-            if (this.head == null) {
-                this.head = node;
-            } else {
-                this.tail.next = node;
-            }
-            this.tail = node;
         }
     }
 
@@ -40,5 +28,13 @@ public class _1_PrintLinkedList {
             System.out.println(head.data);
             head = head.next;
         }
+    }
+
+    SinglyLinkedListNode insertNodeAtHead(SinglyLinkedListNode llist, int data) {
+        if (llist == null)
+            return new SinglyLinkedListNode(data);
+        SinglyLinkedListNode node = new SinglyLinkedListNode(data);
+        node.next = llist;
+        return node;
     }
 }
