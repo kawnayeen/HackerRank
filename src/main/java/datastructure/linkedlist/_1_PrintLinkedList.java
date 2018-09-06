@@ -123,4 +123,20 @@ public class _1_PrintLinkedList {
             residentNode.next = immigrantNode;
         return newHead;
     }
+
+    int positionCount = 0;
+
+    int getNode(SinglyLinkedListNode head, int positionFromTail) {
+        if (head.next == null){
+            positionCount = 0;
+            return head.data;
+        }
+        int valFromRemaining = getNode(head.next, positionFromTail);
+        if (positionCount < positionFromTail) {
+            positionCount++;
+            return head.data;
+        } else {
+            return valFromRemaining;
+        }
+    }
 }

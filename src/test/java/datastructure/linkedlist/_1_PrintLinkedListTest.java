@@ -52,4 +52,18 @@ public class _1_PrintLinkedListTest extends ConsoleOutputTest {
         printList.printLinkedList(linkedList.head);
         Assert.assertEquals("16\n13\n31\n", outContent.toString());
     }
+
+    @Test
+    public void testGetNodeFromTail() {
+        _1_PrintLinkedList.SinglyLinkedList linkedList = new _1_PrintLinkedList.SinglyLinkedList();
+        linkedList.insertNode(16);
+        linkedList.insertNode(13);
+        linkedList.insertNode(34);
+        linkedList.insertNode(31);
+        _1_PrintLinkedList printList = new _1_PrintLinkedList();
+        int val = printList.getNode(linkedList.head, 2);
+        Assert.assertEquals(13, val);
+        val = printList.getNode(linkedList.head, 3);
+        Assert.assertEquals(16, val);
+    }
 }
