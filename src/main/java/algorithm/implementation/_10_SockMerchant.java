@@ -1,5 +1,7 @@
 package algorithm.implementation;
 
+import util.FrequencyCount;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -9,16 +11,7 @@ import java.util.Map;
  */
 public class _10_SockMerchant {
     int sockMerchant(int n, int[] ar) {
-        Map<Integer, Integer> frequencyCount = new HashMap<>();
-        for (int val : ar) {
-            if (frequencyCount.containsKey(val)) {
-                int presentCount = frequencyCount.get(val);
-                presentCount++;
-                frequencyCount.put(val, presentCount);
-            } else {
-                frequencyCount.put(val, 1);
-            }
-        }
+        Map<Integer, Integer> frequencyCount = FrequencyCount.countFrequency(ar);
         int numberOfPair = 0;
         for (int key : frequencyCount.keySet()) {
             numberOfPair += frequencyCount.get(key) / 2;
