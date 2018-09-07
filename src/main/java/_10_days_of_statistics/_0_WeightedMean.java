@@ -6,7 +6,7 @@ import util.DoubleUtil;
  * kawnayeen
  * 7/9/18
  */
-public class _1_WeightedMean {
+public class _0_WeightedMean {
     double getWeightedMean(int[] values, int[] weight) {
         int sumOfWeight = 0;
         int sumOfWeightedValue = 0;
