@@ -127,7 +127,7 @@ public class _1_PrintLinkedList {
     int positionCount = 0;
 
     int getNode(SinglyLinkedListNode head, int positionFromTail) {
-        if (head.next == null){
+        if (head.next == null) {
             positionCount = 0;
             return head.data;
         }
@@ -138,5 +138,19 @@ public class _1_PrintLinkedList {
         } else {
             return valFromRemaining;
         }
+    }
+
+    SinglyLinkedListNode removeDuplicates(SinglyLinkedListNode head) {
+        if (head == null || head.next == null)
+            return head;
+        SinglyLinkedListNode nextNode = head;
+        while (nextNode.next != null) {
+            if (nextNode.data == nextNode.next.data) {
+                nextNode.next = nextNode.next.next;
+            } else {
+                nextNode = nextNode.next;
+            }
+        }
+        return head;
     }
 }
