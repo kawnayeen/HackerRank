@@ -194,4 +194,18 @@ public class _1_PrintLinkedList {
         }
         return head;
     }
+
+    int findMergeNode(SinglyLinkedListNode head1, SinglyLinkedListNode head2) {
+        SinglyLinkedListNode backupHead2 = head2;
+        while (head1 != null) {
+            while (head2 != null) {
+                if (head1 == head2)
+                    return head1.data;
+                head2 = head2.next;
+            }
+            head1 = head1.next;
+            head2 = backupHead2;
+        }
+        return 0;
+    }
 }
