@@ -63,4 +63,20 @@ public class _X_DoubleLinkedList {
         }
         return head;
     }
+
+    DoublyLinkedListNode reverse(DoublyLinkedListNode head) {
+        if (head == null)
+            return head;
+        DoublyLinkedListNode currentNode = head;
+        DoublyLinkedListNode tempNode;
+        while (currentNode != null) {
+            tempNode = currentNode.next;
+            currentNode.next = currentNode.prev;
+            currentNode.prev = tempNode;
+            currentNode = tempNode;
+        }
+        while (head.prev!=null)
+            head = head.prev;
+        return head;
+    }
 }
