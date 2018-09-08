@@ -66,4 +66,15 @@ public class _1_PrintLinkedListTest extends ConsoleOutputTest {
         val = printList.getNode(linkedList.head, 3);
         Assert.assertEquals(16, val);
     }
+
+    @Test
+    public void testHasCycle() {
+        _1_PrintLinkedList.SinglyLinkedList linkedList = new _1_PrintLinkedList.SinglyLinkedList();
+        linkedList.insertNode(16);
+        linkedList.insertNode(13);
+        linkedList.insertNode(34);
+        linkedList.insertNode(31);
+        _1_PrintLinkedList printList = new _1_PrintLinkedList();
+        Assert.assertFalse(printList.hasCycle(linkedList.head));
+    }
 }
