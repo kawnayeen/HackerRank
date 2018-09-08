@@ -159,12 +159,39 @@ public class _1_PrintLinkedList {
             return false;
         SinglyLinkedListNode fast = head.next;
         SinglyLinkedListNode slow = head;
-        while (fast != null && fast.next != null ) {
+        while (fast != null && fast.next != null) {
             if (fast == slow)
                 return true;
             fast = fast.next.next;
             slow = slow.next;
         }
         return false;
+    }
+
+    SinglyLinkedListNode insertNodeAtPosition(SinglyLinkedListNode head, int data, int position) {
+        SinglyLinkedListNode newNode = new SinglyLinkedListNode(data);
+        if (head == null)
+            return newNode;
+        if (position == 0) {
+            newNode.next = head;
+            return newNode;
+        }
+        int currentPosition = 0;
+        SinglyLinkedListNode currentNode = head;
+        boolean inserted = false;
+        while (currentNode.next != null) {
+            if (currentPosition + 1 == position) {
+                newNode.next = currentNode.next;
+                currentNode.next = newNode;
+                inserted = true;
+                break;
+            }
+            currentNode = currentNode.next;
+            currentPosition++;
+        }
+        if (!inserted) {
+            currentNode.next = newNode;
+        }
+        return head;
     }
 }
