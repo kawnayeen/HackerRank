@@ -8,7 +8,15 @@ public class SinglyLinkedListNodeTest {
     public void testInstantiation() {
         SinglyLinkedListNode node = new SinglyLinkedListNode(5);
         Assert.assertNotNull(node);
-        Assert.assertEquals(5, node.data);
-        Assert.assertNull(node.next);
+        Assert.assertEquals(5, node.getData());
+        Assert.assertNull(node.getNext());
+    }
+
+    @Test
+    public void testNextReference(){
+        SinglyLinkedListNode firstNode = new SinglyLinkedListNode(5);
+        SinglyLinkedListNode secondNode = new SinglyLinkedListNode(3);
+        firstNode.setNext(secondNode);
+        Assert.assertEquals(3,firstNode.getNext().getData());
     }
 }
