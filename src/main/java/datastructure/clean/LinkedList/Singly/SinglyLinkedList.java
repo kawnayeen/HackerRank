@@ -10,4 +10,16 @@ public class SinglyLinkedList {
     public SinglyLinkedListNode getHead() {
         return head;
     }
+
+    public void insertNodeAtHead(SinglyLinkedListNode node) {
+        node.setNext(head);
+        head = node;
+    }
+
+    public void insertNodeAtTail(SinglyLinkedListNode node) {
+        SinglyLinkedListNode adjacentNode = head;
+        while (adjacentNode.getNext() != null)
+            adjacentNode = adjacentNode.getNext();
+        adjacentNode.setNext(node);
+    }
 }
