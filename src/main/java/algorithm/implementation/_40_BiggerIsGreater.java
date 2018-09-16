@@ -10,21 +10,23 @@ public class _40_BiggerIsGreater {
     String biggerIsGreater(String w) {
         char[] chars = w.toCharArray();
         boolean isReverseSorted = true;
-        int brokenIndex = 0;
-        for (int i = 1; i < chars.length; i++) {
-            if (chars[i] > chars[i - 1]) {
-                isReverseSorted = false;
-                break;
-            }
-        }
-        if (isReverseSorted)
-            return NO_ANSWER;
+        int brokenIndex = -1;
+//        for (int i = 1; i < chars.length; i++) {
+//            if (chars[i] > chars[i - 1]) {
+//                isReverseSorted = false;
+//                break;
+//            }
+//        }
+//        if (isReverseSorted)
+//            return NO_ANSWER;
         for (int i = chars.length - 2; i >= 0; i--) {
             if (chars[i] < chars[i + 1]) {
                 brokenIndex = i;
                 break;
             }
         }
+        if (brokenIndex == -1)
+            return NO_ANSWER;
         List<Character> charUnderScrutiny = new ArrayList<>();
         for (int i = brokenIndex; i < chars.length; i++)
             charUnderScrutiny.add(chars[i]);
