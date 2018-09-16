@@ -4,7 +4,7 @@ import util.DoubleUtil;
 
 public class _4_BinomialDistributionI {
 
-    int[] factorials;
+    protected int[] factorials;
 
     String getBinomialDistribution(int totalEvent, int minimumExpectedEvent, double probabilityOfSuccess) {
         populateFactorials(totalEvent);
@@ -16,7 +16,7 @@ public class _4_BinomialDistributionI {
         return String.valueOf(DoubleUtil.round(outCome, 3));
     }
 
-    void populateFactorials(int totalEvent) {
+    protected void populateFactorials(int totalEvent) {
         factorials = new int[totalEvent + 1];
         factorials[0] = 1;
         factorials[1] = 1;
@@ -24,7 +24,7 @@ public class _4_BinomialDistributionI {
             factorials[i] = i * factorials[i - 1];
     }
 
-    int getCombination(int n, int r) {
+    protected int getCombination(int n, int r) {
         return factorials[n] / (factorials[r] * factorials[n - r]);
     }
 }
