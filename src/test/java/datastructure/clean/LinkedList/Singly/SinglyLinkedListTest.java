@@ -52,4 +52,34 @@ public class SinglyLinkedListTest {
         Assert.assertEquals(9, head.getNext().getNext().getData());
         Assert.assertEquals(7, head.getNext().getNext().getNext().getData());
     }
+
+    @Test
+    public void testInsertNodeAtSpecificPositionFromHeadAtBegin() {
+        SinglyLinkedList singlyLinkedList = new SinglyLinkedList(5);
+        SinglyLinkedListNode nodeOne = new SinglyLinkedListNode(3);
+        singlyLinkedList.insertNodeAtTail(nodeOne);
+        SinglyLinkedListNode nodeToInsert = new SinglyLinkedListNode(1);
+        singlyLinkedList.insertNodeFromHead(0, nodeToInsert);
+        Assert.assertEquals(1, singlyLinkedList.getHead().getData());
+    }
+
+    @Test
+    public void testInsertNodeAtSpecificPositionFromHeadAtEnd() {
+        SinglyLinkedList singlyLinkedList = new SinglyLinkedList(5);
+        SinglyLinkedListNode nodeOne = new SinglyLinkedListNode(3);
+        singlyLinkedList.insertNodeAtTail(nodeOne);
+        SinglyLinkedListNode nodeToInsert = new SinglyLinkedListNode(9);
+        singlyLinkedList.insertNodeFromHead(2, nodeToInsert);
+        Assert.assertEquals(9, singlyLinkedList.getHead().getNext().getNext().getData());
+    }
+
+    @Test
+    public void testInsertNodeAtSpecificPositionFromHeadAtSecondPos() {
+        SinglyLinkedList singlyLinkedList = new SinglyLinkedList(5);
+        SinglyLinkedListNode nodeOne = new SinglyLinkedListNode(3);
+        singlyLinkedList.insertNodeAtTail(nodeOne);
+        SinglyLinkedListNode nodeToInsert = new SinglyLinkedListNode(9);
+        singlyLinkedList.insertNodeFromHead(1, nodeToInsert);
+        Assert.assertEquals(9, singlyLinkedList.getHead().getNext().getData());
+    }
 }

@@ -24,14 +24,21 @@ public class SinglyLinkedList {
     }
 
     public void insertNodeFromHead(int positionAt, SinglyLinkedListNode node) {
+        if (positionAt == 0) {
+            node.setNext(head);
+            head = node;
+            return;
+        }
         int pos = 1;
         SinglyLinkedListNode adjacentNode = head;
-        while (adjacentNode.getNext() != null) {
-            adjacentNode = adjacentNode.getNext();
-            pos++;
+
+        do {
             if (pos == positionAt)
                 break;
-        }
+            adjacentNode = adjacentNode.getNext();
+            pos++;
+        } while (adjacentNode.getNext() != null);
+
         if (positionAt == pos) {
             node.setNext(adjacentNode.getNext());
             adjacentNode.setNext(node);
