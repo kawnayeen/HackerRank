@@ -22,4 +22,24 @@ public class SinglyLinkedList {
             adjacentNode = adjacentNode.getNext();
         adjacentNode.setNext(node);
     }
+
+    public void insertNodeFromHead(int positionAt, SinglyLinkedListNode node) {
+        int pos = 1;
+        SinglyLinkedListNode adjacentNode = head;
+        while (adjacentNode.getNext() != null) {
+            adjacentNode = adjacentNode.getNext();
+            pos++;
+            if (pos == positionAt)
+                break;
+        }
+        if (positionAt == pos) {
+            node.setNext(adjacentNode.getNext());
+            adjacentNode.setNext(node);
+        } else
+            System.err.println("Invalid position to insert from head");
+    }
+
+    public void insertNodeFromTail(int positionAt, SinglyLinkedListNode node) {
+
+    }
 }
