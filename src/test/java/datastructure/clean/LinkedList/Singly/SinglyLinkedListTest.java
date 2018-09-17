@@ -1,5 +1,6 @@
 package datastructure.clean.LinkedList.Singly;
 
+import org.apache.commons.math3.analysis.function.Sin;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -80,6 +81,28 @@ public class SinglyLinkedListTest {
         singlyLinkedList.insertNodeAtTail(nodeOne);
         SinglyLinkedListNode nodeToInsert = new SinglyLinkedListNode(9);
         singlyLinkedList.insertNodeFromHead(1, nodeToInsert);
+        Assert.assertEquals(9, singlyLinkedList.getHead().getNext().getData());
+    }
+
+    @Test
+    public void testInsertNodeAtSpecificPositionFromTailAtEnd() {
+        SinglyLinkedList singlyLinkedList = new SinglyLinkedList(5);
+        SinglyLinkedListNode nodeOne = new SinglyLinkedListNode(3);
+        singlyLinkedList.insertNodeAtTail(nodeOne);
+        SinglyLinkedListNode nodeToInsert = new SinglyLinkedListNode(9);
+        singlyLinkedList.insertNodeFromTail(0, nodeToInsert);
+        Assert.assertEquals(9, singlyLinkedList.getHead().getNext().getNext().getData());
+    }
+
+    @Test
+    public void testInsertNodeAtSpecificPositionFromTail() {
+        SinglyLinkedList singlyLinkedList = new SinglyLinkedList(5);
+        SinglyLinkedListNode nodeOne = new SinglyLinkedListNode(3);
+        SinglyLinkedListNode nodeTwo = new SinglyLinkedListNode(7);
+        singlyLinkedList.insertNodeAtTail(nodeOne);
+        singlyLinkedList.insertNodeAtTail(nodeTwo);
+        SinglyLinkedListNode nodeToInsert = new SinglyLinkedListNode(9);
+        singlyLinkedList.insertNodeFromTail(2, nodeToInsert);
         Assert.assertEquals(9, singlyLinkedList.getHead().getNext().getData());
     }
 }

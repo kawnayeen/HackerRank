@@ -8,6 +8,9 @@ import java.util.stream.IntStream;
  */
 public class _1_CamelCase {
     int camelcase(String s) {
-        return 1 + IntStream.range(0, s.length()).filter(i -> s.charAt(i) >= 'A' && s.charAt(i) <= 'Z').toArray().length;
+        return 1 + IntStream
+                .range(0, s.length())
+                .filter(i -> s.charAt(i) >= 'A' && s.charAt(i) <= 'Z')
+                .toArray().length;
     }
 }
