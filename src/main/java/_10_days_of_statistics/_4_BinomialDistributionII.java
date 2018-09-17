@@ -2,7 +2,7 @@ package _10_days_of_statistics;
 
 import util.DoubleUtil;
 
-public class _5_BinomialDistributionII extends _4_BinomialDistributionI {
+public class _4_BinomialDistributionII extends _4_BinomialDistributionI {
     String getBinomialDistributionAtMost(int totalEvent, int maximumExpectedEvent, double probabilityOfSuccess) {
         populateFactorials(totalEvent);
         double probabilityOfFailure = 1 - probabilityOfSuccess;
