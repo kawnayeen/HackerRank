@@ -54,6 +54,23 @@ public class _1_TopView {
         processNode(node.right, distance + 1, depth + 1);
     }
 
+    Node lca(Node root, int v1, int v2) {
+        Node nodeToCheck = root;
+        do {
+            if (nodeToCheck.data == v1 || nodeToCheck.data == v2)
+                break;
+            if (v1 < nodeToCheck.data && v2 >= nodeToCheck.data)
+                break;
+            if (v2 < nodeToCheck.data && v1 >= nodeToCheck.data)
+                break;
+            if (v1 < nodeToCheck.data)
+                nodeToCheck = nodeToCheck.left;
+            else
+                nodeToCheck = nodeToCheck.right;
+        } while (nodeToCheck != null);
+        return nodeToCheck;
+    }
+
     Node insert(Node root, int data) {
         if (root == null) {
             return new Node(data);
