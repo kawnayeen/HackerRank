@@ -71,6 +71,27 @@ public class _1_TopView {
         return nodeToCheck;
     }
 
+    private static boolean stillBST = true;
+
+    boolean checkBST(Node root) {
+        stillBST = true;
+        checkBSTConstrain(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
+        return stillBST;
+    }
+
+    void checkBSTConstrain(Node node, int minValue, int maxValue) {
+        if (node == null)
+            return;
+        if (stillBST) {
+            if (node.data < minValue || node.data > maxValue) {
+                stillBST = false;
+                return;
+            }
+            checkBSTConstrain(node.left, minValue, node.data - 1);
+            checkBSTConstrain(node.right, node.data + 1, maxValue);
+        }
+    }
+
     Node insert(Node root, int data) {
         if (root == null) {
             return new Node(data);
