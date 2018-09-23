@@ -8,7 +8,8 @@ Completed
 -- Insert at tail
 -- Insert at position N from head
 -- Insert at position N from tail
+- Print
+-- Print LinkedList
+-- Print LinkedList in reverse without reversing it
 Remaining
-- Print LinkedList
-- Print LinkedList in reverse without reversing it
 - Reverse a LinkedList

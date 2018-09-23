@@ -1,6 +1,10 @@
 package datastructure.clean.LinkedList.Singly;
 
 public class SinglyLinkedList {
+    private static final String SPACE = " ";
+    private static final int SEARCH_ENDED = -1;
+    private static final int TAIL_DISTANCE_FROM_TAIL = 0;
+
     private SinglyLinkedListNode head;
 
     public SinglyLinkedList(int initData) {
@@ -54,6 +58,19 @@ public class SinglyLinkedList {
             System.err.println("Invalid position to insert from head");
     }
 
+    public void reverseLinkedList() {
+        head = reverse(head);
+    }
+
+    private SinglyLinkedListNode reverse(SinglyLinkedListNode node) {
+        if (node == null || node.getNext() == null)
+            return node;
+        SinglyLinkedListNode newHead = reverse(node.getNext());
+        node.getNext().setNext(node);
+        node.setNext(null);
+        return newHead;
+    }
+
     public String printLinkedList() {
         StringBuilder builder = new StringBuilder();
         SinglyLinkedListNode startingNode = head;
@@ -65,9 +82,20 @@ public class SinglyLinkedList {
         return builder.toString().trim();
     }
 
-    private static final String SPACE = " ";
-    private static final int SEARCH_ENDED = -1;
-    private static final int TAIL_DISTANCE_FROM_TAIL = 0;
+    public String reversePrintLinkedList() {
+        StringBuilder builder = new StringBuilder();
+        reversePrint(head, builder);
+        return builder.toString().trim();
+    }
+
+    private void reversePrint(SinglyLinkedListNode node, StringBuilder builder) {
+        if (node == null)
+            return;
+        if (node.getNext() != null)
+            reversePrint(node.getNext(), builder);
+        builder.append(node.getData());
+        builder.append(SPACE);
+    }
 
     public void insertNodeFromTail(int positionAt, SinglyLinkedListNode node) {
         insertFromTail(head, node, positionAt);

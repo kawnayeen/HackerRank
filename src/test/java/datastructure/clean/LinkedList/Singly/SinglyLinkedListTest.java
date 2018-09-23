@@ -1,6 +1,5 @@
 package datastructure.clean.LinkedList.Singly;
 
-import org.apache.commons.math3.analysis.function.Sin;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -114,5 +113,30 @@ public class SinglyLinkedListTest {
         singlyLinkedList.insertNodeAtHead(nodeOne);
         singlyLinkedList.insertNodeAtHead(nodeTwo);
         Assert.assertEquals("7 3 5", singlyLinkedList.printLinkedList());
+    }
+
+    @Test
+    public void testReversePrintLinkedList() {
+        SinglyLinkedList singlyLinkedList = new SinglyLinkedList(5);
+        SinglyLinkedListNode nodeOne = new SinglyLinkedListNode(3);
+        SinglyLinkedListNode nodeTwo = new SinglyLinkedListNode(7);
+        singlyLinkedList.insertNodeAtHead(nodeOne);
+        singlyLinkedList.insertNodeAtHead(nodeTwo);
+        Assert.assertEquals("5 3 7", singlyLinkedList.reversePrintLinkedList());
+    }
+
+    @Test
+    public void testReverseLinkedList(){
+        SinglyLinkedList singlyLinkedList = new SinglyLinkedList(5);
+        SinglyLinkedListNode nodeOne = new SinglyLinkedListNode(3);
+        SinglyLinkedListNode nodeTwo = new SinglyLinkedListNode(7);
+        singlyLinkedList.insertNodeAtHead(nodeOne);
+        singlyLinkedList.insertNodeAtHead(nodeTwo);
+        singlyLinkedList.reverseLinkedList();
+        SinglyLinkedListNode head = singlyLinkedList.getHead();
+        Assert.assertEquals(5, head.getData());
+        Assert.assertEquals(3, head.getNext().getData());
+        Assert.assertEquals(7, head.getNext().getNext().getData());
+
     }
 }
