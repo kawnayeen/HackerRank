@@ -6,7 +6,9 @@ Completed
 - Insertion
 -- Insert at head
 -- Insert at tail
-Remaining
-- Insertion
 -- Insert at position N from head
 -- Insert at position N from tail
+Remaining
+- Print LinkedList
+- Print LinkedList in reverse without reversing it
+- Reverse a LinkedList

@@ -105,4 +105,14 @@ public class SinglyLinkedListTest {
         singlyLinkedList.insertNodeFromTail(2, nodeToInsert);
         Assert.assertEquals(9, singlyLinkedList.getHead().getNext().getData());
     }
+
+    @Test
+    public void testPrintLinkedList() {
+        SinglyLinkedList singlyLinkedList = new SinglyLinkedList(5);
+        SinglyLinkedListNode nodeOne = new SinglyLinkedListNode(3);
+        SinglyLinkedListNode nodeTwo = new SinglyLinkedListNode(7);
+        singlyLinkedList.insertNodeAtHead(nodeOne);
+        singlyLinkedList.insertNodeAtHead(nodeTwo);
+        Assert.assertEquals("7 3 5", singlyLinkedList.printLinkedList());
+    }
 }
