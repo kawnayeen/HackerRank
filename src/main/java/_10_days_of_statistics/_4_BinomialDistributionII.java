@@ -4,7 +4,6 @@ import util.DoubleUtil;
 
 public class _4_BinomialDistributionII extends _4_BinomialDistributionI {
     String getBinomialDistributionAtMost(int totalEvent, int maximumExpectedEvent, double probabilityOfSuccess) {
-        populateFactorials(totalEvent);
         double probabilityOfFailure = 1 - probabilityOfSuccess;
         double outCome = 0f;
         for (int i = 0; i <= maximumExpectedEvent; i++) {
