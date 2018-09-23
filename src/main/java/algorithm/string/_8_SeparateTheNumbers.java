@@ -4,9 +4,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class _8_SeparateTheNumbers {
+    private static final String INVALID_PREFIX = "0";
+    private static final String NO = "NO";
+    private static final String YES = "YES";
+
     void separateNumbers(String s) {
-        if (s.startsWith("0") || isSingleChar(s)) {
-            System.out.println("NO");
+        if (s.startsWith(INVALID_PREFIX) || isSameChar(s)) {
+            System.out.println(NO);
             return;
         }
         String backup = new String(s);
@@ -44,9 +48,9 @@ public class _8_SeparateTheNumbers {
         }
 
         if (maintained)
-            System.out.println("YES " + startingValue);
+            System.out.println(YES + " " + startingValue);
         else
-            System.out.println("NO");
+            System.out.println(NO);
     }
 
     Map<Integer, Long> valMap = new HashMap<>();
@@ -61,7 +65,7 @@ public class _8_SeparateTheNumbers {
         return valMap.get(length) == value;
     }
 
-    boolean isSingleChar(String s) {
+    boolean isSameChar(String s) {
         char firstChar = s.charAt(0);
         for (int i = 1; i < s.length(); i++) {
             if (firstChar != s.charAt(i))

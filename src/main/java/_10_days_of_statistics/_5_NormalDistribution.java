@@ -8,6 +8,6 @@ public class _5_NormalDistribution {
         double z = (upTo - mean) / (standardDeviation * Math.sqrt(2));
         double zScore = ErrorFunction.erf(z);
         double cumulativeProbability = 0.5 * (1 + zScore);
-        return DoubleUtil.round(cumulativeProbability, 3);
+        return DoubleUtil.round(cumulativeProbability, 10);
     }
 }
