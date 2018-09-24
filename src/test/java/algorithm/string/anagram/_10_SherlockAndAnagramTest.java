@@ -1,4 +1,4 @@
-package algorithm.string;
+package algorithm.string.anagram;
 
 import org.junit.Assert;
 import org.junit.Before;
