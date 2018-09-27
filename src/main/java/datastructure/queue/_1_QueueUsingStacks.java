@@ -14,15 +14,18 @@ public class _1_QueueUsingStacks {
         int oldestVal = 0;
         for (String query : queries) {
             if (query.startsWith(ENQUEUE)) {
-                int val = Integer.parseInt(query.substring(2));
-                if (primaryStack.size() == 0)
-                    oldestVal = val;
-                primaryStack.push(val);
+                if (primaryStack.size() == 0) {
+                    primaryStack.push(Integer.parseInt(query.substring(2)));
+                    oldestVal = primaryStack.peek();
+                } else {
+                    primaryStack.push(Integer.parseInt(query.substring(2)));
+                }
             } else if (query.startsWith(DEQUEUE)) {
-                backup.clear();
-                while (!primaryStack.isEmpty())
-                    backup.push(primaryStack.pop());
-                backup.pop();
+                while (!primaryStack.isEmpty()) {
+                    int poppedVal = primaryStack.pop();
+                    if (!primaryStack.isEmpty())
+                        backup.push(poppedVal);
+                }
                 if (!backup.isEmpty())
                     oldestVal = backup.peek();
                 else
