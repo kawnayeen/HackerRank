@@ -17,4 +17,11 @@ public class _6_LargestRectangleTest {
         _6_LargestRectangle largestRectangle = new _6_LargestRectangle();
         Assert.assertEquals(12, largestRectangle.largestRectangle(input));
     }
+
+    @Test
+    public void testThree() {
+        int[] input = {11,11,10,10,10};
+        _6_LargestRectangle largestRectangle = new _6_LargestRectangle();
+        Assert.assertEquals(50, largestRectangle.largestRectangle(input));
+    }
 }
