@@ -5,21 +5,33 @@ public class _22_PalindromeIndex {
         int index = -1;
         if (isPalindrome(s))
             return index;
-        for (int i = 0; i < s.length(); i++) {
-            String firstPart = "";
-            String secondPart = "";
-            if (i >= 1)
-                firstPart = s.substring(0, i);
-            if (i < s.length() - 1) {
-                secondPart = s.substring(i + 1);
-            }
-            String finalString = firstPart + secondPart;
-            if (isPalindrome(finalString)) {
-                index = i;
+        int startIndex = 0;
+        int endIndex = s.length() - 1;
+        while (startIndex < endIndex) {
+            if (s.charAt(startIndex) == s.charAt(endIndex)) {
+                startIndex++;
+                endIndex--;
+            } else {
                 break;
             }
         }
+        if (doesMakePalindrome(s, startIndex))
+            return startIndex;
+        if (doesMakePalindrome(s, endIndex))
+            return endIndex;
         return index;
+    }
+
+    boolean doesMakePalindrome(String s, int removeIndex) {
+        StringBuilder builder = new StringBuilder();
+        for (int i = 0; i < s.length(); i++) {
+            if (i == removeIndex) {
+
+            } else {
+                builder.append(s.charAt(i));
+            }
+        }
+        return isPalindrome(builder.toString());
     }
 
     boolean isPalindrome(String s) {
