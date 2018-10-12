@@ -25,4 +25,15 @@ public class FrequencyCount {
         }
         return charCount;
     }
+
+    public static Map<String, Integer> countStringFrequency(String[] strings) {
+        Map<String, Integer> strCount = new HashMap<>();
+        for (String str : strings) {
+            if (strCount.containsKey(str))
+                strCount.put(str, strCount.get(str) + 1);
+            else
+                strCount.put(str, 1);
+        }
+        return strCount;
+    }
 }
