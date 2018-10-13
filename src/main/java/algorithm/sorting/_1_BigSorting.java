@@ -20,6 +20,7 @@ public class _1_BigSorting {
             while (count != 0) {
                 unsorted[index] = key;
                 index++;
+                count--;
             }
         }
         return unsorted;
