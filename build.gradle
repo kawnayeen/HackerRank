@@ -7,13 +7,25 @@
  */
 
 // Apply the java-library plugin to add support for Java Library
+plugins {
+    id 'maven'
+}
 apply plugin: 'java-library'
+
 
 // In this section you declare where to find the dependencies of your project
 repositories {
     // Use jcenter for resolving your dependencies.
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
+
+    maven {
+        url "https://maven.pkg.github.com/kawnayeen/hello-package"
+        credentials {
+            username "kawnayeen"
+            password "af4111d0838091c1780333d50229fcf98d4b325d"
+        }
+    }
 }
 
 dependencies {
@@ -22,6 +34,7 @@ dependencies {
 
     // This dependency is used internally, and not exposed to consumers on their own compile classpath.
     implementation 'com.google.guava:guava:23.0'
+    implementation 'com.kawnayeen:hello-package:0.1'
 
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
